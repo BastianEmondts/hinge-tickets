@@ -9,6 +9,12 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
+      colors: {
+        hinge: {
+          pink: '#E8196C',
+          orange: '#FF5214',
+        },
+      },
     },
   },
   plugins: [],

@@ -7,6 +7,9 @@ import { useCartStore } from '../store/cartStore';
 import { formatDate, formatPrice } from '../utils/formatters';
 import { Package } from '../types';
 
+const accentStyle = { color: '#FF5214' };
+const gradientBg = { background: 'linear-gradient(to right, #E8196C, #FF5214)' };
+
 export function EventDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
@@ -21,8 +24,8 @@ export function EventDetailPage() {
     return (
       <div className="min-h-screen flex items-center justify-center text-white">
         <div className="text-center">
-          <p className="text-2xl font-bold mb-4">Event not found</p>
-          <button onClick={() => navigate('/')} className="text-amber-400 hover:underline">Back to events</button>
+          <p className="text-2xl font-bold mb-4">Veranstaltung nicht gefunden</p>
+          <button onClick={() => navigate('/')} className="hover:underline" style={accentStyle}>Zurück zur Übersicht</button>
         </div>
       </div>
     );
@@ -97,10 +100,13 @@ export function EventDetailPage() {
           onClick={() => navigate('/')}
           className="absolute top-4 left-4 flex items-center gap-1 text-white/80 hover:text-white text-sm bg-black/40 backdrop-blur px-3 py-1.5 rounded-full transition-colors"
         >
-          <ChevronLeft className="w-4 h-4" /> All Events
+          <ChevronLeft className="w-4 h-4" /> Alle Events
         </button>
         <div className="absolute bottom-6 left-4 right-4 sm:left-8">
-          <span className="bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          <span
+            className="text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"
+            style={gradientBg}
+          >
             {event.genre}
           </span>
           <h1 className="text-3xl sm:text-5xl font-black text-white mt-3">{event.name}</h1>
@@ -113,23 +119,23 @@ export function EventDetailPage() {
             <div className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                 <div className="flex items-start gap-3">
-                  <Calendar className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" />
+                  <Calendar className="w-5 h-5 mt-0.5 flex-shrink-0" style={accentStyle} />
                   <div>
-                    <p className="text-zinc-500 text-xs uppercase tracking-wide mb-0.5">Date</p>
+                    <p className="text-zinc-500 text-xs uppercase tracking-wide mb-0.5">Datum</p>
                     <p className="text-white text-sm font-medium">{formatDate(event.date)}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" />
+                  <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" style={accentStyle} />
                   <div>
-                    <p className="text-zinc-500 text-xs uppercase tracking-wide mb-0.5">Time</p>
-                    <p className="text-white text-sm font-medium">Doors open {event.time}</p>
+                    <p className="text-zinc-500 text-xs uppercase tracking-wide mb-0.5">Uhrzeit</p>
+                    <p className="text-white text-sm font-medium">Einlass ab {event.time} Uhr</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" />
+                  <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" style={accentStyle} />
                   <div>
-                    <p className="text-zinc-500 text-xs uppercase tracking-wide mb-0.5">Venue</p>
+                    <p className="text-zinc-500 text-xs uppercase tracking-wide mb-0.5">Veranstaltungsort</p>
                     <p className="text-white text-sm font-medium">{event.venue}</p>
                     <p className="text-zinc-500 text-xs">{event.location}</p>
                   </div>
@@ -139,21 +145,27 @@ export function EventDetailPage() {
             </div>
 
             <div className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800">
-              <h2 className="text-white font-bold text-xl mb-4">Select Tickets</h2>
+              <h2 className="text-white font-bold text-xl mb-4">Tickets auswählen</h2>
               <div className="space-y-3">
                 {event.ticketTypes.map((tt) => (
-                  <div key={tt.id} className="flex items-center justify-between p-4 border border-zinc-700 rounded-xl hover:border-amber-500/50 transition-colors">
+                  <div key={tt.id} className="flex items-center justify-between p-4 border border-zinc-700 rounded-xl hover:border-hinge-pink/50 transition-colors">
                     <div>
                       <p className="text-white font-semibold">{tt.name}</p>
                       <p className="text-zinc-500 text-sm">{tt.description}</p>
-                      <p className="text-amber-400 font-bold mt-1">{formatPrice(tt.price)}</p>
+                      <p className="font-bold mt-1" style={accentStyle}>{formatPrice(tt.price)}</p>
                     </div>
                     <div className="flex items-center gap-3">
-                      <button onClick={() => setQty(tt.id, -1)} className="w-8 h-8 rounded-full border border-zinc-600 flex items-center justify-center text-zinc-400 hover:border-amber-500 hover:text-amber-400 transition-colors">
+                      <button
+                        onClick={() => setQty(tt.id, -1)}
+                        className="w-8 h-8 rounded-full border border-zinc-600 flex items-center justify-center text-zinc-400 hover:border-hinge-pink hover:text-hinge-pink transition-colors"
+                      >
                         <Minus className="w-3.5 h-3.5" />
                       </button>
                       <span className="text-white w-6 text-center font-medium">{quantities[tt.id] || 0}</span>
-                      <button onClick={() => setQty(tt.id, 1)} className="w-8 h-8 rounded-full border border-zinc-600 flex items-center justify-center text-zinc-400 hover:border-amber-500 hover:text-amber-400 transition-colors">
+                      <button
+                        onClick={() => setQty(tt.id, 1)}
+                        className="w-8 h-8 rounded-full border border-zinc-600 flex items-center justify-center text-zinc-400 hover:border-hinge-pink hover:text-hinge-pink transition-colors"
+                      >
                         <Plus className="w-3.5 h-3.5" />
                       </button>
                     </div>
@@ -163,17 +175,17 @@ export function EventDetailPage() {
             </div>
 
             <div className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800">
-              <h2 className="text-white font-bold text-xl mb-1">Upgrade Your Night</h2>
-              <p className="text-zinc-500 text-sm mb-5">Add merchandise or drink packages to your order</p>
+              <h2 className="text-white font-bold text-xl mb-1">Deinen Abend upgraden</h2>
+              <p className="text-zinc-500 text-sm mb-5">Füge Merchandise oder Getränkepakete zu deiner Bestellung hinzu</p>
 
-              <h3 className="text-amber-400 font-semibold text-sm uppercase tracking-wider mb-3">🎁 Merchandise</h3>
+              <h3 className="font-semibold text-sm uppercase tracking-wider mb-3" style={accentStyle}>🎁 Merchandise</h3>
               <div className="space-y-3 mb-6">
                 {merchPackages.map((pkg) => (
                   <PackageToggle key={pkg.id} pkg={pkg} selected={!!selectedPackages[pkg.id]} onToggle={() => togglePackage(pkg.id)} />
                 ))}
               </div>
 
-              <h3 className="text-amber-400 font-semibold text-sm uppercase tracking-wider mb-3">🍺 Drink Packages</h3>
+              <h3 className="font-semibold text-sm uppercase tracking-wider mb-3" style={accentStyle}>🍺 Getränkepakete</h3>
               <div className="space-y-3">
                 {drinkPackages.map((pkg) => (
                   <PackageToggle key={pkg.id} pkg={pkg} selected={!!selectedPackages[pkg.id]} onToggle={() => togglePackage(pkg.id)} />
@@ -184,7 +196,7 @@ export function EventDetailPage() {
 
           <div className="lg:col-span-1">
             <div className="sticky top-20 bg-zinc-900 rounded-2xl p-6 border border-zinc-800">
-              <h3 className="text-white font-bold text-lg mb-4">Order Summary</h3>
+              <h3 className="text-white font-bold text-lg mb-4">Bestellübersicht</h3>
               {event.ticketTypes.map((tt) => (
                 (quantities[tt.id] || 0) > 0 && (
                   <div key={tt.id} className="flex justify-between text-sm mb-2">
@@ -201,20 +213,21 @@ export function EventDetailPage() {
               ))}
               {grandTotal > 0 && (
                 <div className="border-t border-zinc-700 mt-4 pt-4 flex justify-between">
-                  <span className="text-white font-bold">Total</span>
-                  <span className="text-amber-400 font-bold text-lg">{formatPrice(grandTotal)}</span>
+                  <span className="text-white font-bold">Gesamt</span>
+                  <span className="font-bold text-lg" style={accentStyle}>{formatPrice(grandTotal)}</span>
                 </div>
               )}
               <button
                 onClick={handleAddToCart}
                 disabled={grandTotal === 0 || added}
-                className="w-full mt-5 bg-amber-500 hover:bg-amber-400 disabled:bg-zinc-700 disabled:text-zinc-500 text-black font-bold py-3 rounded-xl transition-colors flex items-center justify-center gap-2"
+                className="w-full mt-5 disabled:bg-zinc-700 disabled:text-zinc-500 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2 hover:opacity-90"
+                style={grandTotal === 0 || added ? {} : gradientBg}
               >
                 <ShoppingCart className="w-4 h-4" />
-                {added ? 'Added! Going to cart...' : 'Add to Cart'}
+                {added ? 'Hinzugefügt! Weiter zum Warenkorb...' : 'In den Warenkorb'}
               </button>
               {grandTotal === 0 && (
-                <p className="text-zinc-600 text-xs text-center mt-2">Select at least one ticket or package</p>
+                <p className="text-zinc-600 text-xs text-center mt-2">Bitte mindestens ein Ticket oder Paket auswählen</p>
               )}
             </div>
           </div>
@@ -229,24 +242,27 @@ function PackageToggle({ pkg, selected, onToggle }: { pkg: Package; selected: bo
     <div
       onClick={onToggle}
       className={`flex items-start gap-4 p-4 rounded-xl border cursor-pointer transition-all ${
-        selected ? 'border-amber-500 bg-amber-500/10' : 'border-zinc-700 hover:border-zinc-500'
+        selected ? 'border-hinge-pink bg-hinge-pink/10' : 'border-zinc-700 hover:border-zinc-500'
       }`}
     >
-      <div className={`w-5 h-5 rounded border-2 flex-shrink-0 mt-0.5 flex items-center justify-center transition-colors ${
-        selected ? 'border-amber-500 bg-amber-500' : 'border-zinc-600'
-      }`}>
-        {selected && <svg className="w-3 h-3 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>}
+      <div
+        className={`w-5 h-5 rounded border-2 flex-shrink-0 mt-0.5 flex items-center justify-center transition-colors ${
+          selected ? 'border-hinge-pink' : 'border-zinc-600'
+        }`}
+        style={selected ? { background: 'linear-gradient(to right, #E8196C, #FF5214)', borderColor: '#E8196C' } : {}}
+      >
+        {selected && <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>}
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between gap-2">
           <p className="text-white font-semibold text-sm">{pkg.name}</p>
-          <p className="text-amber-400 font-bold text-sm flex-shrink-0">{formatPrice(pkg.price)}</p>
+          <p className="font-bold text-sm flex-shrink-0" style={{ color: '#FF5214' }}>{formatPrice(pkg.price)}</p>
         </div>
         <p className="text-zinc-500 text-xs mt-0.5">{pkg.description}</p>
         <ul className="mt-1.5 space-y-0.5">
           {pkg.items.map((item, i) => (
             <li key={i} className="text-zinc-400 text-xs flex items-center gap-1">
-              <span className="text-amber-500">·</span> {item}
+              <span style={{ color: '#FF5214' }}>·</span> {item}
             </li>
           ))}
         </ul>
