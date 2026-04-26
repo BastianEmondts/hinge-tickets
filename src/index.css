@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased;
+  }
+  * {
+    @apply box-border;
+  }
+}
+
+@layer utilities {
+  .text-hinge-gradient {
+    background: linear-gradient(to right, #E8196C, #FF5214);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-hinge-gradient {
+    background: linear-gradient(to right, #E8196C, #FF5214);
+  }
+  .border-hinge-gradient {
+    border-image: linear-gradient(to right, #E8196C, #FF5214) 1;
+  }
+}
