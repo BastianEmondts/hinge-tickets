@@ -1,0 +1,58 @@
+import { Package } from '../types';
+
+export const packages: Package[] = [
+  {
+    id: 'merch-tshirt-hoodie',
+    name: 'T-Shirt + Hoodie Bundle',
+    description: 'Exclusive The Hinge branded T-shirt and heavyweight hoodie. Limited edition drop.',
+    price: 55,
+    type: 'merch',
+    items: ['The Hinge Logo T-Shirt (unisex)', 'The Hinge Heavyweight Hoodie'],
+    imageUrl: 'https://picsum.photos/seed/merch1/400/300',
+  },
+  {
+    id: 'merch-cap-tote',
+    name: 'Cap + Tote Bag Combo',
+    description: 'Structured 6-panel cap and heavy-duty canvas tote bag. Street-ready essentials.',
+    price: 35,
+    type: 'merch',
+    items: ['The Hinge 6-Panel Cap', 'The Hinge Canvas Tote Bag'],
+    imageUrl: 'https://picsum.photos/seed/merch2/400/300',
+  },
+  {
+    id: 'merch-limited',
+    name: 'Limited Edition Collector Set',
+    description: 'Ultra-rare limited edition item. Only available for this event. Numbered and signed.',
+    price: 80,
+    type: 'merch',
+    items: ['Numbered vinyl record (event mix)', 'Collector poster (A2)', 'Enamel pin set (3x)'],
+    imageUrl: 'https://picsum.photos/seed/merch3/400/300',
+  },
+  {
+    id: 'drink-beer',
+    name: 'Beer Token Package',
+    description: '5 beer tokens valid at all bar stations throughout the night. Save vs. cash.',
+    price: 20,
+    type: 'drink',
+    items: ['5x Beer Token (redeemable at venue)', 'Valid all night'],
+    imageUrl: 'https://picsum.photos/seed/drinks1/400/300',
+  },
+  {
+    id: 'drink-cocktail',
+    name: 'Cocktail Package',
+    description: '3 signature The Hinge cocktails. Crafted by our resident mixologists.',
+    price: 28,
+    type: 'drink',
+    items: ['3x Signature Cocktail of choice', 'Redeemable at main bar'],
+    imageUrl: 'https://picsum.photos/seed/drinks2/400/300',
+  },
+  {
+    id: 'drink-premium',
+    name: 'Premium Spirits Package',
+    description: 'Half bottle of premium spirits with mixers and ice. Delivered to your spot.',
+    price: 65,
+    type: 'drink',
+    items: ['1x Half bottle premium spirits (choice of 3)', 'Mixers and garnish included', 'Table delivery service'],
+    imageUrl: 'https://picsum.photos/seed/drinks3/400/300',
+  },
+];

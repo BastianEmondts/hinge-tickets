@@ -1,0 +1,49 @@
+import { Link } from 'react-router-dom';
+import { Calendar, MapPin } from 'lucide-react';
+import { Event } from '../types';
+import { formatShortDate, formatPrice } from '../utils/formatters';
+
+interface Props {
+  event: Event;
+}
+
+export function EventCard({ event }: Props) {
+  return (
+    <Link
+      to={`/events/${event.id}`}
+      className="group block bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/10"
+    >
+      <div className="relative overflow-hidden aspect-video">
+        <img
+          src={event.imageUrl}
+          alt={event.name}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+        <span className="absolute top-3 left-3 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          {event.genre}
+        </span>
+        <span className="absolute top-3 right-3 bg-black/60 backdrop-blur text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/20">
+          from {formatPrice(event.minPrice)}
+        </span>
+      </div>
+      <div className="p-5">
+        <h3 className="text-white font-bold text-xl mb-3 group-hover:text-amber-400 transition-colors">{event.name}</h3>
+        <div className="space-y-1.5 text-sm text-zinc-400">
+          <div className="flex items-center gap-2">
+            <Calendar className="w-4 h-4 text-amber-500 flex-shrink-0" />
+            <span>{formatShortDate(event.date)} · {event.time}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <MapPin className="w-4 h-4 text-amber-500 flex-shrink-0" />
+            <span>{event.venue} · {event.location}</span>
+          </div>
+        </div>
+        <div className="mt-4 pt-4 border-t border-zinc-800 flex items-center justify-between">
+          <span className="text-zinc-500 text-xs">{event.ticketTypes.length} ticket types available</span>
+          <span className="text-amber-400 text-sm font-semibold group-hover:underline">Get tickets →</span>
+        </div>
+      </div>
+    </Link>
+  );
+}
