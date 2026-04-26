@@ -1,5 +1,6 @@
 const CACHE_NAME = 'hinge-tickets-v1';
-const STATIC_ASSETS = ['/', '/index.html'];
+const BASE = new URL(self.registration.scope).pathname;
+const STATIC_ASSETS = [BASE, BASE + 'index.html'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
