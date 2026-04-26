@@ -7,6 +7,24 @@
     <meta name="theme-color" content="#F59E0B" />
     <link rel="manifest" href="/manifest.json" />
     <title>The Hinge Tickets</title>
+    <script>
+      // Restore path after GitHub Pages 404 redirect (see public/404.html).
+      (function () {
+        var l = window.location;
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          });
+          history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded[0] +
+              (decoded[1] ? '?' + decoded[1] : '') +
+              l.hash
+          );
+        }
+      }());
+    </script>
   </head>
   <body>
     <div id="root"></div>
@@ -14,7 +32,7 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js');
+          navigator.serviceWorker.register('/hinge-tickets/sw.js');
         });
       }
     </script>
