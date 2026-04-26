@@ -2,7 +2,7 @@
   "name": "The Hinge Tickets",
   "short_name": "Hinge Tickets",
   "description": "Buy tickets for The Hinge club events",
-  "start_url": "/",
+  "start_url": "/hinge-tickets/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#F59E0B",
