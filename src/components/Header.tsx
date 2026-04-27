@@ -1,26 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { ShoppingCart } from 'lucide-react';
 import { useCartStore } from '../store/cartStore';
-
-function HingeLogo() {
-  return (
-    <span className="flex items-baseline gap-1 select-none">
-      <span className="text-white font-semibold text-xs tracking-[0.2em] uppercase leading-none">THE</span>
-      <span
-        className="font-black text-2xl italic leading-none"
-        style={{
-          background: 'linear-gradient(to right, #E8196C, #FF5214)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-        }}
-      >
-        hinge
-      </span>
-      <span className="text-white/60 font-medium text-xs tracking-widest uppercase leading-none ml-1">tickets</span>
-    </span>
-  );
-}
+import { HingeLogo } from './HingeLogo';
 
 export function Header() {
   const itemCount = useCartStore((s) => s.getItemCount());
