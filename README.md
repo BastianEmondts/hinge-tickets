@@ -48,6 +48,19 @@ Build for production:
 npm run build
 ```
 
+## Deployment (GitHub Pages)
+
+The CI workflow builds the app and pushes the compiled output to the `gh-pages` branch on every push to `main`.
+
+To serve the correct built files, configure GitHub Pages in the repository settings:
+
+1. Go to **Settings → Pages**
+2. Under **Build and deployment → Source**, select **Deploy from a branch**
+3. Set **Branch** to `gh-pages` and folder to `/ (root)`
+4. Click **Save**
+
+The site will be available at `https://<username>.github.io/hinge-tickets/` once the next CI run completes.
+
 ## Stripe Integration
 
 The checkout page contains a clearly marked placeholder (`src/pages/CheckoutPage.tsx`). To integrate Stripe:
