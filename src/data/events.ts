@@ -122,7 +122,7 @@ export const events: Event[] = [
     venue: 'Batschkapp',
     genre: 'Pop',
     description: "Nostalgie-Mitsingparty vom Feinsten! Backstreet Boys, Spice Girls, *NSYNC, Destiny's Child – singe alle Hits laut mit. Ob Hip Hop & RnB oder pure Pop-Euphorie, hier kommt jeder auf seine Kosten!",
-    imageUrl: 'https://picsum.photos/seed/wannabe-party/800/500',
+    imageUrl: 'https://github.com/user-attachments/assets/9667d0fd-13b0-401c-b82f-2ab7a39dfddd',
     minPrice: 12,
     ticketTypes: [
       { id: 'early', name: 'Frühbucherticket', description: 'Begrenzte Frühbuchertickets', price: 12, available: 80 },
@@ -138,7 +138,7 @@ export const events: Event[] = [
     venue: 'Nachtleben Frankfurt',
     genre: 'Party',
     description: 'Die Frühtanzparty ist zurück im Nachtleben Frankfurt! Von 19 bis 23 Uhr wird getanzt, gelacht und gefeiert. Der perfekte Einstieg ins Wochenende – komm früh, bleib lang!',
-    imageUrl: 'https://picsum.photos/seed/fruehtanz2/800/500',
+    imageUrl: 'https://github.com/user-attachments/assets/da3191bb-0e2c-41a3-adb9-73da5585d2e5',
     minPrice: 13,
     ticketTypes: [
       { id: 'standard', name: 'Standardticket', description: 'Einlass ab 19:00 Uhr', price: 13, available: 200 },
@@ -153,7 +153,7 @@ export const events: Event[] = [
     venue: 'FZW Dortmund',
     genre: 'Ü40',
     description: 'Die beliebteste Ü40-Party im Ruhrgebiet! Musikreise durch die goldenen Jahrzehnte – Soul, Disco, 80er und 90er Hits. Dresscode: Smart Casual. Hier feiern die Erwachsenen!',
-    imageUrl: 'https://picsum.photos/seed/ue40dortmund/800/500',
+    imageUrl: 'https://github.com/user-attachments/assets/5aa7bd4f-728b-4c8b-9a82-bb16d1501c13',
     minPrice: 12.26,
     ticketTypes: [
       { id: 'standard', name: 'Standardticket', description: 'Einlass ab 21:00 Uhr', price: 12.26, available: 250 },
@@ -169,7 +169,7 @@ export const events: Event[] = [
     venue: 'Nachtleben Frankfurt',
     genre: '2000er',
     description: 'Alle 2000er Hits der Reihe nach – von Lady Gaga bis Eminem, von Rihanna bis Linkin Park. Die beste Party für alle, die die Nullerjahre lieben. Tanzfläche garantiert voll!',
-    imageUrl: 'https://picsum.photos/seed/2000er-party/800/500',
+    imageUrl: 'https://github.com/user-attachments/assets/b7887e00-7dc0-4bb6-9dd4-194860c90cfe',
     minPrice: 12,
     ticketTypes: [
       { id: 'standard', name: 'Standardticket', description: 'Einlass ab 23:00 Uhr', price: 12, available: 200 },
