@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F59E0B" />
+    <link rel="manifest" href="/hinge-tickets/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet" />
+    <title>The Hinge Tickets</title>
+    <script>
+      // Restore path after GitHub Pages 404 redirect (see public/404.html).
+      (function () {
+        var l = window.location;
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          });
+          history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded[0] +
+              (decoded[1] ? '?' + decoded[1] : '') +
+              l.hash
+          );
+        }
+      }());
+    </script>
+    <script type="module" crossorigin src="/hinge-tickets/assets/index-Cszaicds.js"></script>
+    <link rel="stylesheet" crossorigin href="/hinge-tickets/assets/index-BA4daGnY.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/hinge-tickets/sw.js');
+        });
+      }
+    </script>
+  </body>
+</html>
