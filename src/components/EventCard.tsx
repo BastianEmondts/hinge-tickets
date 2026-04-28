@@ -11,9 +11,9 @@ export function EventCard({ event }: Props) {
   return (
     <Link
       to={`/events/${event.id}`}
-      className="group block bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-hinge-pink/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-hinge-pink/10"
+      className="group flex flex-col bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-hinge-pink/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-hinge-pink/10"
     >
-      <div className="relative overflow-hidden aspect-video">
+      <div className="relative overflow-hidden aspect-video flex-shrink-0">
         <img
           src={event.imageUrl}
           alt={event.name}
@@ -30,8 +30,8 @@ export function EventCard({ event }: Props) {
           ab {formatPrice(event.minPrice)}
         </span>
       </div>
-      <div className="p-5">
-        <h3 className="text-white font-bold text-xl mb-3 group-hover:opacity-80 transition-opacity">{event.name}</h3>
+      <div className="p-5 flex flex-col flex-1">
+        <h3 className="text-white font-bold text-xl mb-3 group-hover:opacity-80 transition-opacity line-clamp-2 min-h-[3.5rem]">{event.name}</h3>
         <div className="space-y-1.5 text-sm text-zinc-400">
           <div className="flex items-center gap-2">
             <Calendar className="w-4 h-4 flex-shrink-0" style={{ color: '#FF5214' }} />
@@ -42,7 +42,7 @@ export function EventCard({ event }: Props) {
             <span>{event.venue} · {event.location}</span>
           </div>
         </div>
-        <div className="mt-4 pt-4 border-t border-zinc-800 flex items-center justify-between">
+        <div className="mt-auto pt-4 border-t border-zinc-800 flex items-center justify-between">
           <span className="text-zinc-500 text-xs">{event.ticketTypes.length} Ticketkategorien</span>
           <span
             className="text-sm font-semibold group-hover:underline"
