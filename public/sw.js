@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hinge-tickets-v2';
+const CACHE_NAME = 'hinge-tickets-v3';
 const BASE = new URL(self.registration.scope).pathname;
 const STATIC_ASSETS = [BASE, BASE + 'index.html'];
 
