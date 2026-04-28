@@ -10,7 +10,7 @@ export const events: Event[] = [
     venue: 'Grüne Soße Festival Zelt',
     genre: 'Party',
     description: 'Die legendäre Frühtanzparty auf dem Roßmarkt – tanzt gemeinsam in den Mai! Feiert den Frühling mit Musik, Tanz und guter Laune mitten im Herzen Frankfurts. Von 18 bis 22 Uhr geht die Post ab!',
-    imageUrl: 'https://picsum.photos/seed/fruehtanz1/800/500',
+    imageUrl: 'https://github.com/user-attachments/assets/30b6e5be-3dec-465f-b074-b3c3582fa671',
     minPrice: 12,
     ticketTypes: [
       { id: 'standard', name: 'Standardticket', description: 'Einlass ab 18:00 Uhr', price: 12, available: 300 },
@@ -26,7 +26,7 @@ export const events: Event[] = [
     venue: 'Täubchenthal',
     genre: 'Tanz',
     description: 'Leipzig feiert den Maiabend! Einzigartiges Tanzvergnügen im Täubchenthal – mehrere Floors, Top-DJs und ausgelassene Stimmung bis in den frühen Morgen. Tanzt gemeinsam in den Mai!',
-    imageUrl: 'https://picsum.photos/seed/tanzdennmai1/800/500',
+    imageUrl: 'https://github.com/user-attachments/assets/4eff069f-45a0-4153-a4ac-a19bbee9f1e8',
     minPrice: 11.09,
     ticketTypes: [
       { id: 'early', name: 'Frühbucherticket', description: 'Begrenzte Frühbuchertickets', price: 11.09, available: 100 },
@@ -42,7 +42,7 @@ export const events: Event[] = [
     venue: 'Zoom Frankfurt',
     genre: 'Tanz',
     description: 'Frankfurt tanzt! Die große Tanz-in-den-Mai-Nacht im Zoom Frankfurt. Mehrere Floors mit unterschiedlichen Musikstilen – House, Pop, R&B und mehr. Der beste Weg, den 1. Mai zu begrüßen!',
-    imageUrl: 'https://picsum.photos/seed/tanzdennmai2/800/500',
+    imageUrl: 'https://github.com/user-attachments/assets/1774c8bc-2929-41bd-aace-c075d0426eb1',
     minPrice: 13.19,
     ticketTypes: [
       { id: 'early', name: 'Frühbucherticket', description: 'Begrenzte Frühbuchertickets', price: 13.19, available: 80 },
@@ -58,7 +58,7 @@ export const events: Event[] = [
     venue: 'Gesellschaftshaus Palmengarten',
     genre: 'Wein',
     description: 'Jubiläum! Der 10. Frankfurter Rieslingtag im prachtvollen Gesellschaftshaus Palmengarten. Erlebe eine exklusive Weinverkostung mit über 50 Weingütern, Musik und kulinarischen Highlights.',
-    imageUrl: 'https://picsum.photos/seed/riesling26/800/500',
+    imageUrl: 'https://github.com/user-attachments/assets/b381375d-cddc-4c7d-8ec1-6230d6eb99e8',
     minPrice: 26.82,
     ticketTypes: [
       { id: 'standard', name: 'Tagesticket', description: 'Einlass + Probierpaket (10 Weine)', price: 26.82, available: 200 },
@@ -74,7 +74,7 @@ export const events: Event[] = [
     venue: 'Täubchenthal',
     genre: '90er/2000er',
     description: "Der Klassiker ist zurück! Die beste 90er & 2000er Party Leipzigs feiert im Täubchenthal. BSB, Spice Girls, Eminem, Destiny's Child – die Hits deiner Jugend live auf der Tanzfläche!",
-    imageUrl: 'https://picsum.photos/seed/90er2000er/800/500',
+    imageUrl: 'https://github.com/user-attachments/assets/7c316b1f-bed0-4184-82d4-e78efc363378',
     minPrice: 13.32,
     ticketTypes: [
       { id: 'standard', name: 'Standardticket', description: 'Einlass ab 22:00 Uhr', price: 13.32, available: 350 },
@@ -90,7 +90,7 @@ export const events: Event[] = [
     venue: 'Fortuna Frankfurt',
     genre: 'HipHop/RnB',
     description: 'Spring Season Opening! The Classics bringt die goldene Ära des HipHop & R&B zurück. Tupac, Biggie, Usher, Missy Elliott – die Essenz einer ganzen Generation. Komm und feiere mit uns!',
-    imageUrl: 'https://picsum.photos/seed/classics-hiphop/800/500',
+    imageUrl: 'https://github.com/user-attachments/assets/f28d79b2-19de-4b85-b21c-4772b67af627',
     minPrice: 12,
     ticketTypes: [
       { id: 'standard', name: 'Standardticket', description: 'Einlass ab 22:00 Uhr', price: 12, available: 250 },
@@ -106,7 +106,7 @@ export const events: Event[] = [
     venue: 'Batschkapp Frankfurt',
     genre: 'Retro',
     description: 'Frankfurt XXL – 5 Partys in einer Nacht! Die Zeitreise Party nimmt dich mit auf eine musikalische Reise durch die Dekaden. 70er, 80er, 90er, 2000er und aktuelle Hits – alles auf einem Floor!',
-    imageUrl: 'https://picsum.photos/seed/zeitreise26/800/500',
+    imageUrl: 'https://github.com/user-attachments/assets/2e0c2b35-434e-44bc-907d-9072382ad2e1',
     minPrice: 11.09,
     ticketTypes: [
       { id: 'early', name: 'Frühbucherticket', description: 'Begrenzte Verfügbarkeit', price: 11.09, available: 60 },
@@ -122,7 +122,7 @@ export const events: Event[] = [
     venue: 'Batschkapp',
     genre: 'Pop',
     description: "Nostalgie-Mitsingparty vom Feinsten! Backstreet Boys, Spice Girls, *NSYNC, Destiny's Child – singe alle Hits laut mit. Ob Hip Hop & RnB oder pure Pop-Euphorie, hier kommt jeder auf seine Kosten!",
-    imageUrl: 'https://github.com/user-attachments/assets/9667d0fd-13b0-401c-b82f-2ab7a39dfddd',
+    imageUrl: 'https://github.com/user-attachments/assets/bb35a951-cd9f-401f-8de8-cefe4dcd27a0',
     minPrice: 12,
     ticketTypes: [
       { id: 'early', name: 'Frühbucherticket', description: 'Begrenzte Frühbuchertickets', price: 12, available: 80 },
@@ -138,7 +138,7 @@ export const events: Event[] = [
     venue: 'Nachtleben Frankfurt',
     genre: 'Party',
     description: 'Die Frühtanzparty ist zurück im Nachtleben Frankfurt! Von 19 bis 23 Uhr wird getanzt, gelacht und gefeiert. Der perfekte Einstieg ins Wochenende – komm früh, bleib lang!',
-    imageUrl: 'https://github.com/user-attachments/assets/da3191bb-0e2c-41a3-adb9-73da5585d2e5',
+    imageUrl: 'https://github.com/user-attachments/assets/f8eabe23-3e33-49c6-a2c4-698bd967cee6',
     minPrice: 13,
     ticketTypes: [
       { id: 'standard', name: 'Standardticket', description: 'Einlass ab 19:00 Uhr', price: 13, available: 200 },
@@ -153,7 +153,7 @@ export const events: Event[] = [
     venue: 'FZW Dortmund',
     genre: 'Ü40',
     description: 'Die beliebteste Ü40-Party im Ruhrgebiet! Musikreise durch die goldenen Jahrzehnte – Soul, Disco, 80er und 90er Hits. Dresscode: Smart Casual. Hier feiern die Erwachsenen!',
-    imageUrl: 'https://github.com/user-attachments/assets/5aa7bd4f-728b-4c8b-9a82-bb16d1501c13',
+    imageUrl: 'https://github.com/user-attachments/assets/2dc3720b-8ae5-4090-83f8-92aa47f8535e',
     minPrice: 12.26,
     ticketTypes: [
       { id: 'standard', name: 'Standardticket', description: 'Einlass ab 21:00 Uhr', price: 12.26, available: 250 },
@@ -169,7 +169,7 @@ export const events: Event[] = [
     venue: 'Nachtleben Frankfurt',
     genre: '2000er',
     description: 'Alle 2000er Hits der Reihe nach – von Lady Gaga bis Eminem, von Rihanna bis Linkin Park. Die beste Party für alle, die die Nullerjahre lieben. Tanzfläche garantiert voll!',
-    imageUrl: 'https://github.com/user-attachments/assets/b7887e00-7dc0-4bb6-9dd4-194860c90cfe',
+    imageUrl: 'https://github.com/user-attachments/assets/9dd667f5-f071-4d56-b807-aa6236014a10',
     minPrice: 12,
     ticketTypes: [
       { id: 'standard', name: 'Standardticket', description: 'Einlass ab 23:00 Uhr', price: 12, available: 200 },
