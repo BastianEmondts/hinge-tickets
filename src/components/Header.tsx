@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, ScanLine } from 'lucide-react';
 import { useCartStore } from '../store/cartStore';
 import { HingeLogo } from './HingeLogo';
 
@@ -15,6 +15,10 @@ export function Header() {
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           <Link to="/" className="text-zinc-300 hover:text-white text-sm transition-colors">Events</Link>
+          <Link to="/scanner" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-1">
+            <ScanLine className="w-4 h-4" />
+            Scanner
+          </Link>
           <Link to="/cart" className="text-zinc-300 hover:text-white text-sm transition-colors">Warenkorb</Link>
         </nav>
         <button
